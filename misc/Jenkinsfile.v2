@@ -17,7 +17,7 @@ node {
      docker.image('mysql').withRun("-e MYSQL_ALLOW_EMPTY_PASSWORD=yes") { d ->
        docker.image('node:16').inside("--link ${d.id}:db") {
          sh 'npm install --only=dev'
-         sh 'npm test
+         sh 'npm test'
        }
      }
    }                                     
