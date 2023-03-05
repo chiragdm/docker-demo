@@ -4,8 +4,8 @@ node {
       // get the last commit id from a repository you own
       sh 'git ls-remote -h --refs git@github.com:chiragdm/docker-demo.git master |awk "{print $1}"'
       sh 'echo $WORKSPACE'
-      sh 'git clone git@github.com:chiragdm/docker-demo.git /tmp/docker-demo'
-      sh 'cd /tmp/docker-demo'
+      sh 'git clone git@github.com:chiragdm/docker-demo.git /tmp/docker-demo2'
+      sh 'cd /tmp/docker-demo2'
       sh 'touch test'
       sh 'git commit -am "testing"'
       sh 'git push'
